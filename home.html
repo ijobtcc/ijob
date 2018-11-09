@@ -1,0 +1,47 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Login
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<script src="https://www.gstatic.com/firebasejs/5.0.4/firebase.js"></script>
+<script>
+  //Initialize Firebase
+  var config =
+  {
+  };
+  
+  firebase.initializeApp(config);
+  </script>
+
+  <ion-content padding="true" class="has-header">
+
+    <h4 id="login-heading2" style="color:#000000;font-weight:400;">Email:</h4>
+
+    <form id="login-form1" class="list">
+      <label class="item item-input" id="login-input1">
+        <input type="text" placeholder="exemple@gmail.com">
+      </label>
+    </form>
+
+    <h4 id="login-heading3" style="color:#000000;font-weight:400;">Senha:</h4>
+
+    <form id="login-form2" class="list">
+      <label class="item item-input" id="login-input2">
+        <input type="password" placeholder="*********">
+      </label>
+    </form>
+
+    <form id="login-form5" class="list">
+      <div class="spacer" style="width: 300px; height: 29px;"></div>
+      <ion-checkbox id="login-checkbox2">Cliente</ion-checkbox>  Cliente
+      <div class="spacer" style="width: 300px; height: 29px;"></div>
+      <ion-checkbox id="login-checkbox3">Empresa</ion-checkbox>  Empresa
+    </form>
+
+    <button ion-button full id="BtnLogar"(click)= "goToMenuPage()">Logar</button>
+      <p></p>
+    <button ion-button full id="BtnCadastrar" (click) = "goToOpcaoUsuarioPage()">Cadastrar</button>
+    </ion-content>

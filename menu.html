@@ -1,0 +1,69 @@
+
+<ion-header>
+    <script src="https://www.gstatic.com/firebasejs/5.5.7/firebase.js"></script>
+    <script>
+      // Initialize Firebase
+      var config = {
+        apiKey: "AIzaSyADvD17CuAWnNPbJ9f1JFvW3fCmnX_Hx_8",
+        authDomain: "ijob-214419.firebaseapp.com",
+        databaseURL: "https://ijob-214419.firebaseio.com",
+        projectId: "ijob-214419",
+        storageBucket: "ijob-214419.appspot.com",
+        messagingSenderId: "118120058179"
+      };
+      firebase.initializeApp(config);
+    </script>
+  <ion-navbar>
+    <ion-title>Menu</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+
+<ion-content padding>
+  <p></p>
+    <ion-label>Selecione a sua localização para ter resultados 
+      <br>de empresas o mais proximo de você possivel:</ion-label>
+    <p></p>
+    <p></p>
+    <p></p>
+    <ion-list>
+      <ion-item>
+        <ion-label><p>Estado</p></ion-label>
+        <ion-select [(ngModel)]="gaming">
+          <ion-option value="SP">SP</ion-option>
+          <ion-option value="RJ">RJ</ion-option>
+          <ion-option value="MG">MG</ion-option>
+          <ion-option value="MT">MT</ion-option>
+          <ion-option value="MTS">MTS</ion-option>
+          <ion-option value="">PR</ion-option>
+        </ion-select>
+      </ion-item>
+    </ion-list>
+
+    <ion-list>
+        <ion-item>
+          <ion-label>Categoria</ion-label>
+          <ion-select [(ngModel)]="gaming">
+            <ion-option value="ENCANADOR">ENCANADOR</ion-option>
+            <ion-option value="MECANICO">MECANICO</ion-option>
+            <ion-option value="EMPREGADA">EMPREGADA</ion-option>
+            
+          </ion-select>
+        </ion-item>
+      </ion-list>
+
+   <!-- <ion-label fixed>Pesquisar nome da empresa</ion-label>-->
+    <p></p>
+    Pesquisar por serviço: <ion-searchbar (ionInput)="getItems($event)"></ion-searchbar>
+<ion-list>
+  <ion-item *ngFor="let item of items">
+    {{ item }}
+  </ion-item>
+</ion-list>
+
+
+
+  <button ion-button full>Pesquisar</button>
+</ion-content>
